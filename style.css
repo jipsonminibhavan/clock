@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: salmon;
+}
+
+#clock {
+  background-color: #06eba2;
+  border: 3px solid rgb(17, 9, 9);
+  border-radius: 50%;
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 3px 8px #222;
+}
+
+.hand {
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background-color: blueviolet;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+  width: 30%;
+  z-index: 3;
+}
+
+.hand.minutes-hand {
+  height: 3px;
+  z-index: 10;
+  width: 40%;
+}
+
+.hand.second-hand {
+  background-color: red;
+  width: 45%;
+  height: 2px;
+}
+
+#digitalclock {
+  font-family: "Orbitron", sans-serif;
+  color:  #06eba2;
+  font-size: 56px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
